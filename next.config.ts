@@ -1,8 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
+  output: "export",
+
+  // REMOVE THESE TWO LINES:
+  // basePath: "/web",
+  // assetPrefix: "/web/",
+
+  images: {
+    unoptimized: true,
+  },
+
   reactStrictMode: true,
 };
 
