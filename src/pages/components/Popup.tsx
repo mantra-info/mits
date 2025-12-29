@@ -32,6 +32,7 @@ const Popup: React.FC<PopupProps> = ({ externalTrigger, onClose }) => {
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
   const [form, setForm] = useState<EnquiryForm>({
     name: '', 
     email: '', 
@@ -44,14 +45,18 @@ const Popup: React.FC<PopupProps> = ({ externalTrigger, onClose }) => {
 
 
   const [errors, setErrors] = useState<FormErrors>({});
+    const timerStarted = React.useRef(false);
    const openModal = () => {
+     if (showModal) return;
     setShowModal(true);
     setTimeout(() => setIsVisible(true), 10);
   };
 
   useEffect(() => {
+       if (showModal || timerStarted.current) return;
     const timer = setTimeout(() => {
       // Only auto-open if it's not already open
+        timerStarted.current = true;
       if (!showModal) openModal();
     }, 10000);
     return () => clearTimeout(timer);

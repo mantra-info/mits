@@ -8,9 +8,11 @@ import WhyUs from './components/Whyus';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Popup from './components/Popup';
+import { useState } from 'react';
 
 
 const Home: NextPage = () => {
+   const [isPopupOpen, setIsPopupOpen] = useState(false);
   return (
     <>
       <Head>
@@ -20,7 +22,7 @@ const Home: NextPage = () => {
       
       <main className="min-h-screen">
         <Navbar />
-        <Hero />
+         <Hero onOpenPopup={() => setIsPopupOpen(true)} />
         
         {/* ADD IDS HERE */}
         <div id="story"><Story/></div>
@@ -29,7 +31,10 @@ const Home: NextPage = () => {
         <div id="contact"><Contact/></div>
         
         <Footer/>
-        <Popup />
+        <Popup 
+          externalTrigger={isPopupOpen} 
+          onClose={() => setIsPopupOpen(false)} 
+        />
       </main>
     </>
   );
