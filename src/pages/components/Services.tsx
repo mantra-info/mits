@@ -34,7 +34,7 @@ const Services: React.FC = () => {
     <section className="bg-[#111111] text-white py-24 px-6 md:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold mb-20 tracking-tight">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 lg:mb-20 tracking-tight">
           Our Services
         </h2>
 
@@ -49,12 +49,12 @@ const Services: React.FC = () => {
               `}
             >
               {/* Number */}
-              <span className="text-3xl font-bold text-gray-500 mb-14">
+              <span className="text-3xl font-bold text-gray-500 mb-6 lg:mb-14">
                 {service.number}
               </span>
 
               {/* Title */}
-              <h3 className="text-3xl font-bold mb-10 leading-tight min-h-[80px]">
+              <h3 className="text-3xl font-bold mb:3 lg:mb-10 leading-tight min-h-[80px]">
                 {service.title}
               </h3>
 

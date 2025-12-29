@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowUp, Facebook, Instagram, Twitter } from 'lucide-react';
+import Image from 'next/image';
 
 const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -14,9 +15,7 @@ const Footer: React.FC = () => {
           
           {/* Column 1: Logo */}
           <div className="flex flex-col">
-            <h2 className="text-4xl font-extrabold tracking-tighter text-black">
-              mits
-            </h2>
+          <Image src={'/logo.png'} alt="Logo" width={80} height={40} className='w-20 h-auto cursor-pointer'/>
           </div>
 
           {/* Column 2: Quick Links */}
@@ -40,25 +39,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Column 4: Get in Touch */}
-          <div className="flex flex-col items-start md:items-end lg:items-start">
-            <h4 className="text-xl font-bold text-[#333] mb-8">Get in Touch</h4>
-            <div className="flex space-x-4">
-              <a href="https://www.facebook.com/share/17hpTNmD8a/" className="text-black hover:opacity-70 transition-opacity">
-                <Facebook size={24} fill="currentColor" />
-              </a>
-              <a href="https://www.instagram.com/mantrainfotechs?igsh=MXg5Znc0M3Q4OGJrMQ==" className="text-black hover:opacity-70 transition-opacity">
-                <Instagram size={24} />
-              </a>
-              {/* WhatsApp Icon */}
-              <a href="#" className="text-black hover:opacity-70 transition-opacity">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              </a>
-              {/* X Icon */}
-              <a href="#" className="text-black hover:opacity-70 transition-opacity">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
-              </a>
-            </div>
-          </div>
+     
 
        
         </div>

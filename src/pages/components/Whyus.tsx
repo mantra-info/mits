@@ -4,7 +4,19 @@ import { Phone, Star } from 'lucide-react';
 import Link from 'next/link';
 
 const WhyUs: React.FC = () => {
-  const techTags = ["Figma, FigJam", "HTML5, CSS3, JavaScript", "React, Next.js", "WordPress, Webflow"];
+const techTags = [
+  "Figma",
+  "React",
+  "Next.js",
+  "Node.js",
+  "MongoDB",
+  "PostgreSQL",
+  "WordPress",
+  "Shopify",
+  "Webflow"
+];
+
+
 
   return (
     <section className="bg-white py-24 px-6 md:px-16 text-[#111]">
@@ -14,23 +26,48 @@ const WhyUs: React.FC = () => {
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-gray-400 mb-10">Why Pick Us?</h3>
           <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
-            <h2 className="text-4xl md:text-4xl font-bold leading-tight max-w-2xl">
+            <h2 className="text-4xl md:text-4xl font-medium leading-tight max-w-2xl">
 We don't just make websites; 
 We make tools that help businesses flourish Which gives real Results            </h2>
+
             <div className="flex flex-col items-start lg:items-end gap-6 max-w-md">
-              <p className="text-gray-500 text-right lg:text-right font-medium leading-relaxed">
+              <p className="text-gray-500 text-center lg:text-right font-medium leading-relaxed">
                 We combine strategy, design & technology to build digital solutions that are easy to use, which focuses on getting results, as a leading website development company in Kochi.
               </p>
-              <Link href="#contact">
-                 <button className="flex items-center gap-2 border border-[#8fb61d] text-[#718f15] bg-[#f7fbe9] px-6 py-3 rounded-full font-semibold hover:bg-[#8fb61d] hover:text-white transition-all">
-                <Phone size={18} />
-                Schedule a Free Call
-              </button>
-              </Link>
+              <Link href="#contact" className='self-center md:self-end'>
+  <button className="
+    relative group px-8 py-4 rounded-full text-white font-semibold text-lg
+    overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95
+    shadow-[0_20px_50px_rgba(30,64,175,0.3)]
+    
+    /* THE MESH BACKGROUND */
+    /* This layers 4 different colored 'blobs' to create the liquid effect */
+    bg-[#3b82f6] 
+    bg-[radial-gradient(at_0%_0%,_#e0f2fe_0%,_transparent_50%),_radial-gradient(at_100%_0%,_#e879f9_0%,_transparent_50%),_radial-gradient(at_100%_100%,_#2563eb_0%,_transparent_50%),_radial-gradient(at_0%_100%,_#818cf8_0%,_transparent_50%)]
+    
+    /* GLASS BORDER */
+    border border-white/40
+  ">
+    
+    {/* GLASS GLOSS OVERLAY */}
+    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-white/30 opacity-100" />
+
+    {/* CONTENT */}
+    <span className="relative z-10 flex items-center gap-3 drop-shadow-sm">
+      <Phone size={22} fill="white" className="opacity-90" />
+      <span className="tracking-wide">Schedule a Free Call</span>
+    </span>
+
+    {/* INTERACTIVE HOVER SHINE */}
+    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transform" />
+  </button>
+</Link>
+
+
            
             </div>
           </div>
-        </div>
+        </div>  
 
         {/* --- Cards Grid --- */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -48,7 +85,7 @@ We make tools that help businesses flourish Which gives real Results            
                   "Flexible architecture for long-term expansion"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 font-semibold text-sm">
-                    <Star size={18} className="text-yellow-400 fill-yellow-400" />
+                    <Image src={'/bulletin.png'} alt='bulletin' width={12} height={12}/>
                     {item}
                   </li>
                 ))}
@@ -57,6 +94,7 @@ We make tools that help businesses flourish Which gives real Results            
             {/* Phone Image mockup */}
             <div className="relative w-full h-full  mt-10 -mb-10 scale-110">
               <Image 
+                priority
                 src="/Gradient.png" // Replace with your phone mockup image
                 alt="Mobile UI Mockups" 
                 fill 
@@ -93,7 +131,7 @@ We make tools that help businesses flourish Which gives real Results            
                   "User testing & design refinement"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 font-semibold text-sm">
-                    <span className="text-lg">👉</span>
+                    <Image src={'/bulletin_second.png'} alt='bulletin' width={12} height={12}/>
                     {item}
                   </li>
                 ))}
@@ -102,22 +140,43 @@ We make tools that help businesses flourish Which gives real Results            
 
             {/* Bottom Right: Green CTA Card */}
             <div className=" 
-        bg-[url('/Green.png')]
+        bg-[url('/story_new.jpg')]
         bg-cover
         bg-center
         bg-no-repeat rounded-[40px] p-10 flex flex-col justify-center items-start relative overflow-hidden group">
            
               
-              <h4 className="text-3xl font-bold text-white mb-8 max-w-xs leading-tight">
+              <h4 className="text-3xl font-bold text-black mb-8 max-w-xs leading-tight">
                 Worldclass Design<br/>Unstoppable Growth
               </h4>
-              <Link href="#contact">
-                <button className="flex items-center gap-2 bg-white text-[#718f15] px-6 py-3 rounded-full font-light shadow-lg  transition-transform hover:scale-105 active:scale-95">
-                <Phone size={18} fill="#718f15" />
-               Let's Connect Now
-              </button>
-              </Link>
-            
+                       <Link href="#contact" className='sm:self-center md:self-start'>
+  <button className="
+    relative group px-4 py-4 rounded-full text-white  text-[11px] lg:text-[15px]
+    overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95
+    shadow-[0_20px_50px_rgba(30,64,175,0.3)]
+    
+    /* THE MESH BACKGROUND */
+    /* This layers 4 different colored 'blobs' to create the liquid effect */
+    bg-[#3b82f6] 
+    bg-[radial-gradient(at_0%_0%,_#e0f2fe_0%,_transparent_50%),_radial-gradient(at_100%_0%,_#e879f9_0%,_transparent_50%),_radial-gradient(at_100%_100%,_#2563eb_0%,_transparent_50%),_radial-gradient(at_0%_100%,_#818cf8_0%,_transparent_50%)]
+    
+    /* GLASS BORDER */
+    border border-white/40
+  ">
+    
+    {/* GLASS GLOSS OVERLAY */}
+    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-white/30 opacity-100" />
+
+    {/* CONTENT */}
+    <span className="relative z-10 flex items-center gap-1 drop-shadow-sm">
+      <Phone size={12} fill="white" className="opacity-90" />
+      <span className="tracking-wide">Book a free 30 min's expert call</span>
+    </span>
+
+    {/* INTERACTIVE HOVER SHINE */}
+    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transform" />
+  </button>
+</Link>
             </div>
 
           </div>
