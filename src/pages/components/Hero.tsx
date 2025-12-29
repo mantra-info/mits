@@ -51,7 +51,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenPopup }) => {
           {/* <Link href={"#contact"}> */}
              <button  
             onClick={onOpenPopup} 
-            className="w-full md:w-auto bg-[#1230d3] hover:bg-[#0e25a8] text-white px-8 py-4 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 mx-auto shadow-xl shadow-blue-500/20 transition-all transform hover:scale-105"
+            className="w-auto md:w-auto bg-[#1230d3] hover:bg-[#0e25a8] text-white px-8 py-4 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 mx-auto shadow-xl shadow-blue-500/20 transition-all transform hover:scale-105"
           >
             Let's Build Your Website 
           </button>
