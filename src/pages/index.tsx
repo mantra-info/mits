@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Popup from './components/Popup';
 import { useState } from 'react';
+import LogoMarquee from './components/Clients';
 
 
 const Home: NextPage = () => {
@@ -28,6 +29,9 @@ const Home: NextPage = () => {
         <div id="story"><Story/></div>
         <div id="services"><Services/></div>
         <div id="why-us"><WhyUs/></div>
+        
+        <div id="client"><LogoMarquee/></div>
+
         <div id="contact"><Contact/></div>
         
         <Footer/>

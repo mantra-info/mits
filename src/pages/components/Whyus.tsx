@@ -85,7 +85,7 @@ We make tools that help businesses flourish Which gives real Results            
                   "Flexible architecture for long-term expansion"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 font-semibold text-sm">
-                    <Image src={'/bulletin.png'} alt='bulletin' width={12} height={12}/>
+                    <Image src={'/bulletin.webp'} alt='bulletin' width={12} height={12}/>
                     {item}
                   </li>
                 ))}
@@ -95,7 +95,7 @@ We make tools that help businesses flourish Which gives real Results            
             <div className="relative w-full h-full  mt-10 -mb-10 scale-110">
               <Image 
                 priority
-                src="/Gradient.png" // Replace with your phone mockup image
+                src="/Gradient.webp" // Replace with your phone mockup image
                 alt="Mobile UI Mockups" 
                 fill 
                 className="object-contain object-center"
@@ -131,7 +131,7 @@ We make tools that help businesses flourish Which gives real Results            
                   "User testing & design refinement"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 font-semibold text-sm">
-                    <Image src={'/bulletin_second.png'} alt='bulletin' width={12} height={12}/>
+                    <Image src={'/bulletin_second.webp'} alt='bulletin' width={12} height={12}/>
                     {item}
                   </li>
                 ))}
@@ -140,7 +140,7 @@ We make tools that help businesses flourish Which gives real Results            
 
             {/* Bottom Right: Green CTA Card */}
             <div className=" 
-        bg-[url('/story_new.jpg')]
+        bg-[url('/story_new.webp')]
         bg-cover
         bg-center
         bg-no-repeat rounded-[40px] p-10 flex flex-col justify-center items-start relative overflow-hidden group">

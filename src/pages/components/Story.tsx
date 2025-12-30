@@ -19,7 +19,7 @@ const Story: React.FC = () => {
           </h2>
            <div className="relative w-full aspect-square max-w-[500px] mb-8 lg:hidden">
             <Image
-              src="/glasseffect.png" 
+              src="/glasseffect.webp" 
               alt="Design and Development Illustration"
               fill
               className="object-contain"
@@ -73,7 +73,7 @@ const Story: React.FC = () => {
         <div className="relative hidden lg:flex justify-end">
           <div className="relative w-full aspect-square max-w-[650px]">
             <Image
-              src="/glasseffect.png" 
+              src="/glasseffect.webp" 
               alt="Design and Development Illustration"
               fill
               className="object-contain"

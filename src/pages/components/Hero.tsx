@@ -11,13 +11,16 @@ const Hero: React.FC<HeroProps> = ({ onOpenPopup }) => {
   <section className="relative min-h-screen flex flex-col overflow-hidden">
   
       <div className="absolute inset-0 -z-10">
-        <Image
-          src="/Hero_new.jpg"
-          alt="Background Texture"
-          fill
-          className="object-cover"
-          priority
-        />
+       <Image
+  src="/Hero_new.webp"
+  alt='Hero'
+  fill
+  priority
+  fetchPriority="high"
+  sizes="100vw"
+  quality={75}
+  className="object-cover"
+/>
         <div className="absolute inset-0 bg-white/10"></div>
       </div>
 

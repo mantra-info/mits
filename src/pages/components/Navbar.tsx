@@ -61,7 +61,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="relative z-[110]">
-            <Image src={'/logo.png'} alt="Logo" width={80} height={40} className='w-20 h-auto cursor-pointer'/>
+            <Image src={'/logo.webp'} alt="Logo" width={80} height={40} className='w-20 h-auto cursor-pointer'/>
           </div>
 
           {/* Desktop Nav */}

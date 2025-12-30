@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
           
           {/* Column 1: Logo */}
           <div className="flex flex-col">
-          <Image src={'/logo.png'} alt="Logo" width={80} height={40} className='w-20 h-auto cursor-pointer'/>
+          <Image src={'/logo.webp'} alt="Logo" width={80} height={40} className='w-20 h-auto cursor-pointer'/>
           </div>
 
           {/* Column 2: Quick Links */}

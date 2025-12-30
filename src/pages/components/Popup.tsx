@@ -153,9 +153,9 @@ const Popup: React.FC<PopupProps> = ({ externalTrigger, onClose }) => {
         {/* LEFT SIDE */}
         <div className="hidden md:flex relative w-full md:w-[40%] p-10 flex-col bg-gray-50 border-r border-gray-100">
 
-           <Image src={'/logo.png'} alt="Logo" width={80} height={40} className='w-20 h-auto cursor-pointer'/>
+           <Image src={'/logo.webp'} alt="Logo" width={80} height={40} className='w-20 h-auto cursor-pointer'/>
           <div className="relative flex-1 w-full mt-4">
-            <Image src="/popup_new.png" alt="Illustration" fill className="object-contain" unoptimized />
+            <Image src="/popup_new.webp" alt="Illustration" fill className="object-contain" unoptimized />
           </div>
         </div>
 
@@ -165,7 +165,7 @@ const Popup: React.FC<PopupProps> = ({ externalTrigger, onClose }) => {
             {!isSubmitted ? (
               <>
                 <div className="md:hidden flex items-center justify-between mb-4 border-b border-white/10 pb-4">
-                   <Image src={'/Logo_White.png'} alt="Logo" width={80} height={40} className='w-20 h-auto cursor-pointer'/>
+                   <Image src={'/Logo_White.webp'} alt="Logo" width={80} height={40} className='w-20 h-auto cursor-pointer'/>
                 </div>
 
                 <h2 className="text-2xl md:text-3xl font-bold mb-2">Let’s Talk Project</h2>
