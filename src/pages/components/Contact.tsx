@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { useRouter } from 'next/router'; 
 import 'react-phone-number-input/style.css';
 import PhoneInput, { 
   isValidPhoneNumber, 
@@ -21,6 +21,7 @@ type EnquiryForm = {
 type FormErrors = { [K in keyof EnquiryForm]?: string };
 
 const Contact: React.FC = () => {
+    const router = useRouter(); 
   const [form, setForm] = useState<EnquiryForm>({
     name: '', 
     email: '', 
@@ -34,7 +35,7 @@ const Contact: React.FC = () => {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
+
 
   const validate = (): boolean => {
     const newErrors: FormErrors = {};
@@ -89,10 +90,11 @@ const Contact: React.FC = () => {
       });
 
       if (res.ok) {
-        setSuccess(true);
+       sessionStorage.setItem('formSubmitted', 'true');
         setForm({ name: '', email: '', phone: '',countryCode: '+91',  businessType: '', message: '', companyName: '' });
         setErrors({});
-        setTimeout(() => setSuccess(false), 5000);
+        router.push('/thank-you'); 
+      
       } else {
         alert('Failed to send enquiry. Please try again.');
       }
@@ -106,7 +108,7 @@ const Contact: React.FC = () => {
   return (
     <section className="relative bg-black text-white py-20 px-6 md:px-16 overflow-hidden min-h-screen flex flex-col justify-center">
       {/* Background Text (kept your design) */}
-      <div className="absolute inset-x-0 bottom-10 flex justify-center pointer-events-none select-none opacity-20">
+      <div className="absolute inset-x-0 bottom-10 flex justify-center pointer-events-none select-none opacity-20 ">
         <h1 className="text-[180px] md:text-[350px] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-gray-300 to-black/70 leading-none">
           mits
         </h1>
@@ -117,7 +119,6 @@ const Contact: React.FC = () => {
 
           {/* Left Side Content */}
           <div className="flex flex-col h-full justify-center">
-            <span className="text-4xl mb-6">👋</span>
             <h2 className="text-4xl md:text-6xl font-bold leading-[1.1] mb-6 tracking-tight">
               Let's Talk About Your <br /> Project
             </h2>
@@ -132,7 +133,7 @@ const Contact: React.FC = () => {
               <div>
                 <p className="text-gray-500 text-sm mb-1 uppercase tracking-widest">Email Us</p>
                 <p className="text-3xl md:text-5xl font-bold tracking-tighter hover:text-gray-300 transition-colors">
-                  info@mantraitsolutions.in
+                  hello@mantrainfotechs.com
                 </p>
               </div>
             </div>
@@ -231,11 +232,7 @@ const Contact: React.FC = () => {
                 </button>
               </div>
 
-              {success && (
-                <p className="text-green-400 text-sm font-medium animate-pulse mt-4">
-                  ✅ Enquiry sent! We'll contact you soon.
-                </p>
-              )}
+            
             </form>
           </div>
         </div>

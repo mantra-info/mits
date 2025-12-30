@@ -36,7 +36,7 @@ Trusted by Leading Brands </h2>
           }}
           transition={{
             ease: "linear",
-            duration: 25, // Lower number = faster speed
+            duration: 45, 
             repeat: Infinity,
           }}
         >

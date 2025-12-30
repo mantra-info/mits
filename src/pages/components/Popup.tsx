@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, CheckCircle2 } from 'lucide-react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import 'react-phone-number-input/style.css';
 import PhoneInput, { 
   isValidPhoneNumber, 
@@ -28,6 +29,7 @@ const inputClass = (error?: string) =>
    ${error ? 'border-red-500 focus:border-red-500' : 'border-white/10 focus:border-white/30'}`;
 
 const Popup: React.FC<PopupProps> = ({ externalTrigger, onClose }) => {
+  const router = useRouter(); 
   const [isVisible, setIsVisible] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -95,8 +97,6 @@ const Popup: React.FC<PopupProps> = ({ externalTrigger, onClose }) => {
       } else if (!emailRegex.test(form.email)) {
         newErrors.email = "Invalid email format";
       }
-  
-      // Phone validation (Using libphonenumber-js logic)
      if (!form.phone) {
         newErrors.phone = "Phone number is required";
       } else {
@@ -131,7 +131,8 @@ const Popup: React.FC<PopupProps> = ({ externalTrigger, onClose }) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       });
-      if (res.ok) setIsSubmitted(true);
+      if (res.ok) {sessionStorage.setItem('formSubmitted', 'true');
+        router.push('/thank-you');}
     } catch (err) {
       alert("Error sending enquiry.");
     } finally {
