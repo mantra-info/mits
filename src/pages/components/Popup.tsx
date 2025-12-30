@@ -212,7 +212,8 @@ const Popup: React.FC<PopupProps> = ({ externalTrigger, onClose }) => {
                       <select className={`bg-white/5 border rounded-xl px-4 py-3 outline-none appearance-none text-[16px] md:text-sm
                         ${errors.businessType ? 'border-red-500 text-red-400' : 'border-white/10 text-gray-400'}`} 
                         value={form.businessType} onChange={e => setForm({...form, businessType: e.target.value})}>
-                        <option value="ecommerce">E-commerce (Online Store)</option>
+              <option value="">Select Business Type</option>
+                  <option value="ecommerce">E-commerce (Online Store)</option>
                   <option value="portfolio">Portfolio / Personal Website</option>
                   <option value="saas">SaaS (Software as a Service)</option>
                   <option value="corporate">Corporate / Company Website</option>

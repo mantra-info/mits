@@ -119,7 +119,7 @@ const Contact: React.FC = () => {
 
           {/* Left Side Content */}
           <div className="flex flex-col h-full justify-center">
-            <h2 className="text-4xl md:text-6xl font-bold leading-[1.1] mb-6 tracking-tight">
+            <h2 className="text-3xl md:text-6xl font-bold leading-[1.1] mb-6 tracking-tight">
               Let's Talk About Your <br /> Project
             </h2>
             <p className="text-gray-400 text-lg max-w-sm mb-12">
@@ -132,7 +132,7 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <p className="text-gray-500 text-sm mb-1 uppercase tracking-widest">Email Us</p>
-                <p className="text-3xl md:text-5xl font-bold tracking-tighter hover:text-gray-300 transition-colors">
+                <p className="text-2xl md:text-4xl font-bold tracking-tighter hover:text-gray-300 transition-colors">
                   hello@mantrainfotechs.com
                 </p>
               </div>
