@@ -106,10 +106,10 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section className="relative bg-black text-white py-20 px-6 md:px-16 overflow-hidden min-h-screen flex flex-col justify-center">
+    <section className="relative bg-black text-white py-20 px-6 md:px-16 overflow-hidden min-h-screen flex flex-col ">
       {/* Background Text (kept your design) */}
-      <div className="absolute inset-x-0 bottom-10 flex justify-center pointer-events-none select-none opacity-20 ">
-        <h1 className="text-[180px] md:text-[350px] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-gray-300 to-black/70 leading-none">
+      <div className="absolute inset-x-0 bottom-10 flex justify-center pointer-events-none select-none opacity-20 lg:mb-10 ">
+        <h1 className="text-[120px] md:text-[250px] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-gray-300 to-black/70 leading-none">
           mits
         </h1>
       </div>
@@ -236,7 +236,7 @@ const Contact: React.FC = () => {
             </form>
           </div>
         </div>
-          <div className="flex justify-center mt-20">
+          <div className=" flex justify-center items-end mt-20 lg:mt-52">
           <div className="px-6 py-2 border hidden md:block  border-gray-800 rounded-full bg-black/50 backdrop-blur-sm text-[10px] md:text-xs text-gray-500 uppercase tracking-[0.2em]">
             Strategic Plan <span className="mx-2 text-gray-800">•</span> Good Design <span className="mx-2 text-gray-800">•</span> Results That Matters
           </div>
