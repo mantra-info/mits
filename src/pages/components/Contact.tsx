@@ -115,11 +115,12 @@ const Contact: React.FC = () => {
   alt="Mits Logo"
   width={384}
   height={144}
-  priority
+ priority
+  fetchPriority="high"
   className="
     w-3/4 h-28
     md:w-2/3 md:h-40
-    lg:w-[600px] lg:h-[200px]
+    lg:w-[750px] lg:h-[200px]
     object-contain
   "
 />

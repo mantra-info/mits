@@ -23,6 +23,8 @@ const Story: React.FC = () => {
               alt="Design and Development Illustration"
               fill
               className="object-contain"
+              priority
+  fetchPriority="high"
             />
           </div>
           
