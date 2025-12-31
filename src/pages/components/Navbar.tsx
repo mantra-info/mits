@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
 
 
-  const phoneNumber = "+916282113506";
+  const phoneNumber = "+919074471662";
 
   useEffect(() => {
   

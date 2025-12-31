@@ -6,6 +6,7 @@ import PhoneInput, {
   parsePhoneNumber, 
   isPossiblePhoneNumber, 
 } from 'react-phone-number-input';
+import Image from 'next/image';
 
 type EnquiryForm = {
   name: string;
@@ -108,11 +109,22 @@ const Contact: React.FC = () => {
   return (
     <section className="relative bg-black text-white py-20 px-6 md:px-16 overflow-hidden min-h-screen flex flex-col ">
       {/* Background Text (kept your design) */}
-      <div className="absolute inset-x-0 bottom-10 flex justify-center pointer-events-none select-none opacity-20 lg:mb-10 ">
-        <h1 className="text-[120px] md:text-[250px] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-gray-300 to-black/70 leading-none">
-          mits
-        </h1>
-      </div>
+    <div className="absolute inset-x-0 bottom-10 flex justify-center pointer-events-none select-none opacity-80 lg:mb-24">
+  <Image
+  src="/mits.webp"
+  alt="Mits Logo"
+  width={384}
+  height={144}
+  priority
+  className="
+    w-3/4 h-28
+    md:w-2/3 md:h-40
+    lg:w-[600px] lg:h-[200px]
+    object-contain
+  "
+/>
+
+</div>
 
       <div className="max-w-7xl mx-auto relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
@@ -128,7 +140,7 @@ const Contact: React.FC = () => {
             <div className="space-y-6 mt-auto">
               <div>
                 <p className="text-gray-500 text-sm mb-1 uppercase tracking-widest">Call Us</p>
-                <p className="text-2xl font-semibold">+91 62821 13506</p>
+                <p className="text-2xl font-semibold">+91 90744 71662</p>
               </div>
               <div>
                 <p className="text-gray-500 text-sm mb-1 uppercase tracking-widest">Email Us</p>

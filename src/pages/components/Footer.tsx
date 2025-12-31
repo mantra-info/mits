@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-xl font-bold text-[#333] mb-8">Help Centre</h4>
             <ul className="space-y-4 text-gray-600 font-medium">
-              <li>+91 62821 13506</li>
+            
               <li>+91 90744 71662</li>
               <li>hello@mantrainfotechs.com</li>
               <li>Infopark TBC Kochi, Kerala</li>
