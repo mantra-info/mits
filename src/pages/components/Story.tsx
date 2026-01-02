@@ -23,8 +23,7 @@ const Story: React.FC = () => {
               alt="Design and Development Illustration"
               fill
               className="object-contain"
-              priority
-  fetchPriority="high"
+               loading="lazy"
             />
           </div>
           
@@ -79,6 +78,7 @@ const Story: React.FC = () => {
               alt="Design and Development Illustration"
               fill
               className="object-contain"
+              loading="lazy"
             />
           </div>
         </div>

@@ -94,11 +94,12 @@ We make tools that help businesses flourish Which gives real Results            
             {/* Phone Image mockup */}
             <div className="relative w-full h-full  mt-10 -mb-10 scale-110">
               <Image 
-                priority
+                 loading="lazy"
                 src="/Gradient.webp" // Replace with your phone mockup image
                 alt="Mobile UI Mockups" 
                 fill 
                 className="object-contain object-center"
+
               />
             </div>
           </div>
@@ -154,13 +155,8 @@ We make tools that help businesses flourish Which gives real Results            
     relative group px-4 py-4 rounded-full text-white  text-[11px] lg:text-[15px]
     overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95
     shadow-[0_20px_50px_rgba(30,64,175,0.3)]
-    
-    /* THE MESH BACKGROUND */
-    /* This layers 4 different colored 'blobs' to create the liquid effect */
     bg-[#3b82f6] 
     bg-[radial-gradient(at_0%_0%,_#e0f2fe_0%,_transparent_50%),_radial-gradient(at_100%_0%,_#e879f9_0%,_transparent_50%),_radial-gradient(at_100%_100%,_#2563eb_0%,_transparent_50%),_radial-gradient(at_0%_100%,_#818cf8_0%,_transparent_50%)]
-    
-    /* GLASS BORDER */
     border border-white/40
   ">
     
