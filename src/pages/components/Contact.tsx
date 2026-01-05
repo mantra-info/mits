@@ -75,44 +75,36 @@ const Contact: React.FC = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     
-  //   // Trigger Validation
-  //   if (!validate()) return;
+    // Trigger Validation
+    if (!validate()) return;
 
-  //   setLoading(true);
+    setLoading(true);
 
-  //   try {
-  //     const res = await fetch('/send-mail.php', {
-  //       method: 'POST',
-  //       headers: { 'Content-Type': 'application/json' },
-  //       body: JSON.stringify(form),
-  //     });
+    try {
+      const res = await fetch('/send-mail.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
 
-  //     if (res.ok) {
-  //      sessionStorage.setItem('formSubmitted', 'true');
-  //       setForm({ name: '', email: '', phone: '',countryCode: '+91',  businessType: '', message: '', companyName: '' });
-  //       setErrors({});
-  //       router.push('/thank-you'); 
+      if (res.ok) {
+       sessionStorage.setItem('formSubmitted', 'true');
+        setForm({ name: '', email: '', phone: '',countryCode: '+91',  businessType: '', message: '', companyName: '' });
+        setErrors({});
+        router.push('/thank-you'); 
       
-  //     } else {
-  //       alert('Failed to send enquiry. Please try again.');
-  //     }
-  //   } catch (error) {
-  //     alert('Error connecting to server.');
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  if (!validate()) {
-    e.preventDefault(); // stop submit if validation fails
-    return;
-  }
-  setLoading(true);
-};
-
+      } else {
+        alert('Failed to send enquiry. Please try again.');
+      }
+    } catch (error) {
+      alert('Error connecting to server.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <section className="relative bg-black text-white py-20 px-6 md:px-16 overflow-hidden min-h-screen flex flex-col ">
@@ -162,16 +154,8 @@ const Contact: React.FC = () => {
 
           {/* Right Side Form */}
           <div className="bg-[#0a0a0a]/60 backdrop-blur-md p-1 border border-white/5 rounded-3xl">
-       <form
-  action="https://formspree.io/f/mbdlwwwb"   // 👈 your real ID
-  method="POST"
-  onSubmit={handleSubmit}
-  className="p-6 md:p-8 space-y-4"
-  noValidate
->      
-<input type="hidden" name="_subject" value="New enquiry from Mantra Infotechs" />
-<input type="hidden" name="_redirect" value="https://mits-one.vercel.app//thank-you" />
-
+            <form className="p-6 md:p-8 space-y-4" onSubmit={handleSubmit} noValidate>
+              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1">
                   <label htmlFor="full-name" className="sr-only">Full Name</label>
@@ -216,7 +200,7 @@ const Contact: React.FC = () => {
                       countryCode: parsed?.countryCallingCode ? `+${parsed.countryCallingCode}` : ''
                     });
                   }}
-                   inputProps={{
+                           inputProps={{
       id: 'mobile',
       name: 'mobile',
       'aria-label': 'Mobile phone number',
