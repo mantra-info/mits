@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 // Replace these paths with your actual image files in the /public folder
 const images = [
@@ -42,25 +43,31 @@ Trusted by Leading Brands </h2>
         >
           {/* First set of images */}
           {images.map((src, index) => (
-            <div key={index} className="flex items-center justify-center w-40 h-20 shrink-0">
-              <img
-                src={src}
-                alt="brand-logo"
-                className="max-w-full max-h-full object-contain"
-              />
-            </div>
+             <div key={index} className="flex items-center justify-center w-40 h-20 shrink-0 relative">
+    <Image
+      src={src}
+      alt={`Brand logo ${index}`}
+      fill
+      className="object-contain"
+      sizes="160px"
+      loading="lazy"
+    />
+  </div>
           ))}
 
           {/* Duplicate set to create seamless loop */}
           {images.map((src, index) => (
-            <div key={`dup-${index}`} className="flex items-center justify-center w-40 h-20 shrink-0">
-              <img
-                src={src}
-                alt="brand-logo"
-                className="max-w-full max-h-full object-contain"
-              />
-            </div>
-          ))}
+              <div key={`dup-${index}`} className="flex items-center justify-center w-40 h-20 shrink-0 relative">
+                <Image
+                  src={src}
+                  alt={`Partner Brand Duplicate ${index}`}
+                  fill
+                  className="object-contain"
+                  sizes="160px"
+                  loading="lazy"
+                />
+              </div>
+            ))}
         </motion.div>
       </div>
     </div>

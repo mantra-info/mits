@@ -1,15 +1,16 @@
 import type { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Story from './components/Story';
-import Services from './components/Services';
-import WhyUs from './components/Whyus';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Popup from './components/Popup';
+const Story = dynamic(() => import('./components/Story'));
+const Services = dynamic(() => import('./components/Services'));
+const WhyUs = dynamic(() => import('./components/Whyus'));
+const LogoMarquee = dynamic(() => import('./components/Clients'));
+const Contact = dynamic(() => import('./components/Contact'));
+const Footer = dynamic(() => import('./components/Footer'));
+const Popup = dynamic(() => import('./components/Popup'), { ssr: false });
 import { useState } from 'react';
-import LogoMarquee from './components/Clients';
 
 
 const Home: NextPage = () => {

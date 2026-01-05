@@ -31,7 +31,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenPopup }) => {
         <div className="flex-grow flex flex-col items-center justify-center md:flex-grow-0">
         
           <div className="hidden md:inline-block border border-gray-300 rounded-full px-4 py-1 mb-8 bg-white/50 backdrop-blur-sm">
-            <p className="text-[8px] md:text-xs font-medium text-gray-600 uppercase tracking-widest">
+            <p className="text-xs md:text-xs font-medium text-gray-600 uppercase tracking-widest">
               Strategic Plan <span className="mx-1">•</span> Good Design <span className="mx-1">•</span> Results That Matter
             </p>
           </div>
@@ -51,14 +51,14 @@ const Hero: React.FC<HeroProps> = ({ onOpenPopup }) => {
         {/* Button Area */}
       
         <div className="mt-auto md:mt-10 md:flex-none">
-          {/* <Link href={"#contact"}> */}
+        
              <button  
             onClick={onOpenPopup} 
             className="w-auto md:w-auto bg-[#1230d3] hover:bg-[#0e25a8] text-white px-8 py-4 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 mx-auto shadow-xl shadow-blue-500/20 transition-all transform hover:scale-105"
           >
             Let's Build Your Website 
           </button>
-          {/* </Link> */}
+         
         </div>
         
       </div>

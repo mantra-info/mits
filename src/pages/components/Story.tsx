@@ -11,19 +11,22 @@ const Story: React.FC = () => {
         
         {/* Left Content Column */}
         <div className="flex flex-col items-start">
-          <h3 className="text-2xl font-bold text-gray-400 mb-10">
+          <h2 className="text-2xl font-bold text-gray-400 mb-10">
             Our Story
-          </h3>
-           <h2 className="text-4xl md:text-5xl font-bold text-[#111] leading-tight mb-8 max-w-md">
-          Your Digital Partner for Design & Development
           </h2>
+           <h3 className="text-4xl md:text-5xl font-bold text-[#111] leading-tight mb-8 max-w-md">
+          Your Digital Partner for Design & Development
+          </h3>
            <div className="relative w-full aspect-square max-w-[500px] mb-8 lg:hidden">
             <Image
               src="/glasseffect.webp" 
               alt="Design and Development Illustration"
-              fill
+              
               className="object-contain"
                loading="lazy"
+                width={766}
+  height={696}
+    sizes="(max-width: 768px) 90vw, 800px"
             />
           </div>
           
@@ -39,9 +42,8 @@ const Story: React.FC = () => {
           </div>
 
           {/* Outline CTA Button */}
-             <Link href="#contact" className='self-center md:self-start'>
-  <button className="
-    relative group px-8 py-4 rounded-full text-white font-semibold text-lg
+           
+  <Link href="#contact" className="inline-flex items-center gap-3  px-8 py-4 rounded-full text-white font-semibold text-lg
     overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95
     shadow-[0_20px_50px_rgba(30,64,175,0.3)]
     
@@ -65,8 +67,8 @@ const Story: React.FC = () => {
 
     {/* INTERACTIVE HOVER SHINE */}
     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transform" />
-  </button>
-</Link>
+  </Link>
+
 
         </div>
 
@@ -76,9 +78,12 @@ const Story: React.FC = () => {
             <Image
               src="/glasseffect.webp" 
               alt="Design and Development Illustration"
-              fill
+             
               className="object-contain"
               loading="lazy"
+                           width={766}
+  height={696}
+    sizes="(max-width: 768px) 90vw, 800px"
             />
           </div>
         </div>

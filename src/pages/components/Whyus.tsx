@@ -24,19 +24,17 @@ const techTags = [
         
         {/* --- Header Section --- */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-gray-400 mb-10">Why Pick Us?</h3>
+          <h2 className="text-3xl font-bold text-gray-400 mb-10">Why Pick Us?</h2>
           <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
-            <h2 className="text-4xl md:text-4xl font-medium leading-tight max-w-2xl">
+            <h3 className="text-4xl md:text-4xl font-medium leading-tight max-w-2xl">
 We don't just make websites; 
-We make tools that help businesses flourish Which gives real Results            </h2>
+We make tools that help businesses flourish Which gives real Results            </h3>
 
             <div className="flex flex-col items-start lg:items-end gap-6 max-w-md">
               <p className="text-gray-500 text-center lg:text-right font-medium leading-relaxed">
                 We combine strategy, design & technology to build digital solutions that are easy to use, which focuses on getting results, as a leading website development company in Kochi.
               </p>
-              <Link href="#contact" className='self-center md:self-end'>
-  <button className="
-    relative group px-8 py-4 rounded-full text-white font-semibold text-lg
+            <Link href="#contact" className="inline-flex items-end gap-3  px-8 py-4 rounded-full text-white font-semibold text-lg
     overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95
     shadow-[0_20px_50px_rgba(30,64,175,0.3)]
     
@@ -60,8 +58,7 @@ We make tools that help businesses flourish Which gives real Results            
 
     {/* INTERACTIVE HOVER SHINE */}
     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transform" />
-  </button>
-</Link>
+  </Link>
 
 
            

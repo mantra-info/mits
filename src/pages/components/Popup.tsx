@@ -180,11 +180,13 @@ const Popup: React.FC<PopupProps> = ({ externalTrigger, onClose }) => {
                   {/* ROW 1: Name & Email */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="flex flex-col gap-1">
-                      <input placeholder="Full Name" className={inputClass(errors.name)} value={form.name} onChange={e => setForm({...form, name: e.target.value})} />
+                      <label htmlFor="full-name" className="sr-only">Full Name</label>
+                      <input id='full-name' placeholder="Full Name" className={inputClass(errors.name)} value={form.name} onChange={e => setForm({...form, name: e.target.value})} />
                       {errors.name && <p className="text-red-500 text-[10px] md:text-xs ml-1">{errors.name}</p>}
                     </div>
                     <div className="flex flex-col gap-1">
-                      <input type="email" placeholder="Email" className={inputClass(errors.email)} value={form.email} onChange={e => setForm({...form, email: e.target.value})} />
+                      <label htmlFor="email" className="sr-only">Email</label>
+                      <input id='email' type="email" placeholder="Email" className={inputClass(errors.email)} value={form.email} onChange={e => setForm({...form, email: e.target.value})} />
                       {errors.email && <p className="text-red-500 text-[10px] md:text-xs ml-1">{errors.email}</p>}
                     </div>
                   </div>
@@ -193,10 +195,17 @@ const Popup: React.FC<PopupProps> = ({ externalTrigger, onClose }) => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="flex flex-col gap-1">
                       <div className={`flex items-center bg-white/5 border rounded-xl px-4 py-3 ${errors.phone ? 'border-red-500' : 'border-white/10'}`}>
+                      
                         <PhoneInput
                           international
                           defaultCountry="IN"
                           value={form.phone}
+                           inputProps={{
+      id: 'mobile',
+      name: 'mobile',
+      'aria-label': 'Mobile phone number',
+      autoComplete: 'tel',
+    }}
                           onChange={(val) => {
                             const parsed = val ? parsePhoneNumber(val) : null;
                             setForm({ 
@@ -212,7 +221,8 @@ const Popup: React.FC<PopupProps> = ({ externalTrigger, onClose }) => {
                     </div>
 
                     <div className="flex flex-col gap-1">
-                      <select className={`bg-white/5 border rounded-xl px-4 py-3 outline-none appearance-none text-[16px] md:text-sm
+                      <label htmlFor="businessType" className="sr-only">Select Business Type</label>
+                      <select id='businessType' className={`bg-white/5 border rounded-xl px-4 py-3 outline-none appearance-none text-[16px] md:text-sm
                         ${errors.businessType ? 'border-red-500 text-red-400' : 'border-white/10 text-gray-400'}`} 
                         value={form.businessType} onChange={e => setForm({...form, businessType: e.target.value})}>
               <option value="">Select Business Type</option>
@@ -231,13 +241,15 @@ const Popup: React.FC<PopupProps> = ({ externalTrigger, onClose }) => {
 
                   {/* ROW 3: Company Name */}
                   <div className="flex flex-col gap-1">
-                    <input placeholder="Company Name" className={inputClass(errors.companyName)} value={form.companyName} onChange={e => setForm({...form, companyName: e.target.value})} />
+                    <label htmlFor="companyname" className="sr-only">Company Name</label>
+                    <input id='companyname' placeholder="Company Name" className={inputClass(errors.companyName)} value={form.companyName} onChange={e => setForm({...form, companyName: e.target.value})} />
                     {errors.companyName && <p className="text-red-500 text-[10px] md:text-xs ml-1">{errors.companyName}</p>}
                   </div>
 
                   {/* ROW 4: Message */}
                   <div className="flex flex-col gap-1">
-                    <textarea rows={2} placeholder="Brief of your requirement" className={`w-full bg-white/5 border rounded-xl px-4 py-3 outline-none focus:border-white/30 text-[16px] md:text-sm resize-none ${errors.message ? 'border-red-500' : 'border-white/10'}`} value={form.message} onChange={e => setForm({...form, message: e.target.value})} />
+                    <label htmlFor="message" className="sr-only">Message or Requirement</label>
+                    <textarea id='message' rows={2} placeholder="Brief of your requirement" className={`w-full bg-white/5 border rounded-xl px-4 py-3 outline-none focus:border-white/30 text-[16px] md:text-sm resize-none ${errors.message ? 'border-red-500' : 'border-white/10'}`} value={form.message} onChange={e => setForm({...form, message: e.target.value})} />
                     {errors.message && <p className="text-red-500 text-[10px] md:text-xs ml-1">{errors.message}</p>}
                   </div>
 

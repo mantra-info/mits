@@ -61,7 +61,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="relative z-[110]">
-            <Image src={'/logo.webp'} alt="Logo" width={80} height={40} className='w-20 h-auto cursor-pointer'/>
+            <Image src={'/logo.webp'} alt="Logo" width={80} height={40} priority className='w-20 h-auto cursor-pointer'/>
           </div>
 
           {/* Desktop Nav */}
@@ -84,7 +84,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden relative z-[110] p-2 text-gray-900">
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden relative z-[110] p-2 text-gray-900"  aria-label={isOpen ? "Close Menu" : "Open Menu"}>
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>

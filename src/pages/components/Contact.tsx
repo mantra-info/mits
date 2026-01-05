@@ -158,7 +158,9 @@ const Contact: React.FC = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1">
+                  <label htmlFor="full-name" className="sr-only">Full Name</label>
                   <input
+                   id="full-name"
                     value={form.name}
                     onChange={e => setForm({ ...form, name: e.target.value })}
                     placeholder="Full Name"
@@ -168,7 +170,9 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div className="flex flex-col gap-1">
+                  <label htmlFor="email" className="sr-only">Email</label>
                   <input
+                  id='email'
                     type="email"
                     value={form.email}
                     onChange={e => setForm({ ...form, email: e.target.value })}
@@ -181,7 +185,9 @@ const Contact: React.FC = () => {
 
               {/* International Phone Input */}
               <div className="flex flex-col gap-1">
+               
                  <PhoneInput
+                
                   international
                   defaultCountry="IN"
                   value={form.phone}
@@ -194,13 +200,21 @@ const Contact: React.FC = () => {
                       countryCode: parsed?.countryCallingCode ? `+${parsed.countryCallingCode}` : ''
                     });
                   }}
+                   inputProps={{
+      id: 'mobile',
+      name: 'mobile',
+      'aria-label': 'Mobile phone number',
+      autoComplete: 'tel',
+    }}
                   className={`phone-input-custom w-full bg-[#111] border ${errors.phone ? 'border-red-500' : 'border-gray-800'} rounded-xl px-5 py-4 focus-within:border-white/20 outline-none transition-all`}
                 />
                 {errors.phone && <span className="text-red-500 text-xs ml-1">{errors.phone}</span>}
               </div>
 
               <div className="flex flex-col gap-1">
+                <label htmlFor="businessType" className="sr-only">Select Business Type</label>
                 <select
+                id='businessType'
                   value={form.businessType}
                   onChange={e => setForm({ ...form, businessType: e.target.value })}
                   className={`w-full bg-[#111] border ${errors.businessType ? 'border-red-500' : 'border-gray-800'} rounded-xl px-5 py-4 focus:border-white/20 outline-none text-gray-400 appearance-none`}
@@ -217,8 +231,9 @@ const Contact: React.FC = () => {
                 </select>
                 {errors.businessType && <span className="text-red-500 text-xs ml-1">{errors.businessType}</span>}
               </div>
-
+<label htmlFor="companyname" className="sr-only">Company Name</label>
               <input
+              id='companyname'
                 value={form.companyName}
                 onChange={e => setForm({ ...form, companyName: e.target.value })}
                 placeholder="Company Name"
@@ -226,7 +241,9 @@ const Contact: React.FC = () => {
               />
 
               <div className="flex flex-col gap-1">
+                <label htmlFor="message" className="sr-only">Message or Requirement</label>
                 <textarea
+                id='message'
                   rows={4}
                   value={form.message}
                   onChange={e => setForm({ ...form, message: e.target.value })}
