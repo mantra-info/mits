@@ -59,12 +59,12 @@ const Navbar = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          {/* Logo */}
+
           <div className="relative z-[110]">
             <Image src={'/logo.webp'} alt="Logo" width={80} height={40} priority className='w-20 h-auto cursor-pointer'/>
           </div>
 
-          {/* Desktop Nav */}
+       
           <div className="hidden md:flex space-x-10 text-[15px] font-semibold text-gray-800">
             {navLinks.map((link) => (
               <Link key={link.name} href={link.href} className="hover:text-black transition-colors">
