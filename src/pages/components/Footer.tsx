@@ -37,11 +37,6 @@ const Footer: React.FC = () => {
               <li>Infopark TBC Kochi, Kerala</li>
             </ul>
           </div>
-
-          {/* Column 4: Get in Touch */}
-     
-
-       
         </div>
 
         {/* Separator Line */}

@@ -48,7 +48,7 @@ We make tools that help businesses flourish Which gives real Results            
   ">
     
     {/* GLASS GLOSS OVERLAY */}
-    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-white/30 opacity-100" />
+    {/* <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-white/30 opacity-100" /> */}
 
     {/* CONTENT */}
     <span className="relative z-10 flex items-center gap-3 drop-shadow-sm">

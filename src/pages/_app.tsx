@@ -1,7 +1,6 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
-import PreLoader from "./components/PreLoader"; // Import normally
 import ScrollToTop from "./components/ScrollToTop";
 import { Instrument_Sans } from 'next/font/google'
 import Script from "next/script";
