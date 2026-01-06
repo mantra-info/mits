@@ -11,6 +11,7 @@ const Contact = dynamic(() => import('./components/Contact'));
 const Footer = dynamic(() => import('./components/Footer'));
 const Popup = dynamic(() => import('./components/Popup'), { ssr: false });
 import { useState } from 'react';
+import organizationSchema from '@/lib/Schema';
 
 
 const Home: NextPage = () => {
@@ -18,7 +19,24 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>mits | Design & Build Websites</title>
+         <title>Website Design & Web Development Company in Kochi</title>
+
+        <meta
+          name="description"
+          content="We are a professional website design and web development company in Kochi, delivering responsive, fast, and SEO-optimized websites for all businesses."
+        />
+
+        <link
+          rel="canonical"
+          href="https://web.mantrainfotechs.com/"
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema)
+          }}
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       

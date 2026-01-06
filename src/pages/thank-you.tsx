@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 const ThankYou = () => {
      const router = useRouter();
@@ -22,7 +23,13 @@ const ThankYou = () => {
   if (!isAuthorized) return null;
 
   return (
-    <section className="relative bg-black text-white min-h-screen overflow-hidden flex items-center justify-center px-6">
+    <>
+          <Head>
+        <title>Thank You | Mantra Infotechs</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+
+      <section className="relative bg-black text-white min-h-screen overflow-hidden flex items-center justify-center px-6">
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none opacity-10">
         <h1 className="text-[200px] md:text-[500px] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-gray-300 to-black leading-none">
           mits
@@ -80,6 +87,8 @@ const ThankYou = () => {
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
     </section>
+    </>
+  
   );
 };
 
