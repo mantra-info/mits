@@ -12,6 +12,7 @@ const Footer = dynamic(() => import('./components/Footer'));
 const Popup = dynamic(() => import('./components/Popup'), { ssr: false });
 import { useState } from 'react';
 import organizationSchema from '@/lib/Schema';
+import WorksSection from './components/WorkSection';
 
 
 const Home: NextPage = () => {
@@ -47,6 +48,7 @@ const Home: NextPage = () => {
         {/* ADD IDS HERE */}
         <div id="story"><Story/></div>
         <div id="services"><Services/></div>
+        <div id="works"><WorksSection/></div>
         <div id="why-us"><WhyUs/></div>
         
         <div id="client"><LogoMarquee/></div>
